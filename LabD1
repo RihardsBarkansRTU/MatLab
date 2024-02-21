@@ -1,0 +1,62 @@
+A = [1 2 ; 3 4]
+B = [2 3 ; 4 5]
+C = A*B
+syms a b c d
+A = [a b ; c d]
+syms h g p q
+b = [h g ; p q]
+C = A*B
+D = A.*B
+
+a = sym('a');
+sqrt(a^2)
+a = sym('a','positive')
+sqrt(a^2)
+
+2. veids
+syms a b c d
+A = [a b ; c d]
+A'
+syms a b c d real
+A = [a b ; c d]
+A'
+% 3. veids kā definēt simoliskus mainīgos
+A = sym('a',[2 3])
+
+Uzdevums 1
+A = sym('a',[3 3])
+A*A
+A.*A
+syms x
+diff(x^2)
+
+Uzdevums 2
+syms x
+z = a*x^2
+diff(z,x)
+
+Uzdevums 3
+syms x
+y = x^3+3*x-7
+diff(y,x)
+
+Uzdevums 4
+syms x y
+z = x^5*y^3
+p = int(z,y)
+int(p,y)
+
+Uzdevums 5
+syms x
+int(sin(x),x,0,pi)
+
+Uzdevums 6
+syms x
+y = (sin(x))^2
+double(int(y,x,0,pi/3))
+syms x
+limit(1/(x-1),x,1,'Right')
+syms x
+solve(x^2-3*x+2==0,x)
+syms x y
+[x_atb,y_atb]=solve(5*x+2*y==16,x-y==-1)
